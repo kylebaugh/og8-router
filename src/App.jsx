@@ -1,17 +1,7 @@
 import './App.css'
+import { Link, Outlet } from 'react-router-dom'
 
-const users = {
-  1: {
-    name: 'Sir Lancelot',
-    hobby: 'Seeking the Holy Grail',
-    funFact: 'Raised in a fairy land by the Lady of the Lake',
-  },
-  2: {
-    name: 'Sir Robin',
-    hobby: 'Running away',
-    funFact: 'Nearly stood up to the vicious Chicken of Bristol',
-  },
-}
+
 
 function App() {
 
@@ -19,18 +9,20 @@ function App() {
     <>
       <ul>
         <li>
-          <a href="">Home</a>
+          <Link to='/'>Home</Link>
         </li>
         <li>
-          <a href="">About</a>
+          <Link to='/about'>About</Link>
         </li>
         <li>
-          <a href="">User 1</a>
+          <Link to='/user/1'>User 1</Link>
         </li>
         <li>
-          <a href="">User 2</a>
+          <Link to='/user/2'>User 2</Link>
         </li>
       </ul>
+
+      <Outlet />
     </>
   )
 }

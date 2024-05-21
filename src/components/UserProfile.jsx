@@ -1,10 +1,8 @@
 import React from 'react'
+import { useLoaderData } from 'react-router-dom'
 
 const UserProfile = () => {
-
-    const name = 'King Arthur'
-    const hobby = 'Gathering knights for the Round Table'
-    const funFact = 'Subverted the ways of democracy when the Lady of the Lake hucked a sword at him'
+    const {name, hobby, funFact} = useLoaderData()
 
     return (
         <div>
